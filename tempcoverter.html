@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <style>
+      .center {
+        text-align: top;
+        color: rgb(73, 15, 15);
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1 class="center">Temperature converter</h1>
+  </body>
+  <head>
+    <meta name="viewport" content="width=device-width,intial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Maven+pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font"
+    />
+    <style>
+      .{
+          margin: 0; padding: 0; box-sizing: border-box;
+          font-family: 'times new romon',sans-serif;
+          background-color: rgb(103, 105, 100);
+          background-color:  #535252;
+       }
+       div{
+          width: 100%;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;align-items: center;
+       }
+       h2{
+          text-align: center;
+       }
+       input {
+          border: 5px solid #777676;
+          -webkit-box-shadow:
+          inset 0 0 8px rgba(0,0,0,0.1);
+                0 0 16px rgba(0,0,0,0.1);
+          -moz-box-shadow:
+          inset 0 0 8px rgba(0,0,0,0.1);
+                0 0 16px rgba(0,0,0,0.1);
+          box-shadow:
+          inset 0 0 8px rgba(0,0,0,0.1);
+                0 0 16px rgba(0,0,0,0.1);
+          padding: 15px;
+          background: #ffffff;
+          margin: 0 0 10px 0;
+      }
+      /* Grneral Buttons */
+      button {
+          width: 150px;
+          height:40px;
+          background: linear-gradient(to bottom,#ffffff 0%,#ffffff 100%); /*w3c */
+          border: none;
+          border-radius: 5px;
+          position: realative;
+          border-bottom: 4px solid #000000;
+          color: #000000;
+          font-weight: 600;
+          font-family: 'open sans',sans-serif;
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+          font-size: 15px;
+          text-align: left;
+          text-indent: 5px;
+          box-shadow: 0px 3px 0px rgba(0,0,0,0.1);
+          cursor: pointer;
+      /* just for presentation */
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 30px;
+      }
+      button:active {
+          box-shadow: 0px 2px 0px rgba(0,0,0,0.2);
+          top: 1px;
+      }
+      button::after {
+          content: "";
+          width: 0;
+          height: 0;
+          display: block;
+          border-top: 20px solid #000000;
+          border-bottom: 20px solid #000000;
+          border-left: 16px solid transparent;
+          border-right: 20px solid #000000;
+          position: absolute;
+          opacity: 0.6;
+          right: 0;
+          top: 0;
+          border-radius: 0 5px 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <br />
+        <input
+          type="number"
+          name="Farenheit"
+          placeholder="Enter Farenheit Degree"
+          id="fd"
+        /><br />
+        <button onclick="changeDeg()">CONVERT</button><br />
+        <input type="text" name="" placeholder="Degree in Celcius" id="cd" />
+      </div>
+    </section>
+    <script>
+      const changeDeg = () => {
+        const fv = document.getElementById("fd").value;
+        // T(℃) = (T(℉)-32) × 5/9
+        let newcv = ((fv - 32) * 5) / 9;
+        console.log(newcv);
+        document.getElementById("cd").value = newcv + "* ℃ ";
+      };
+    </script>
+  </body>
+</html>
